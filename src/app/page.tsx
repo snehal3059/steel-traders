@@ -103,11 +103,6 @@ export default function HomePage() {
                 iron and steel trading company based in Howrah, West Bengal. What began as a small trading 
                 venture has grown into a trusted supplier of high-quality MS steel products.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Under the continued leadership of the second generation, we bring fresh digital insight 
-                while preserving the timeless values of integrity, transparency, and customer commitment 
-                that our founder instilled.
-              </p>
               <p className="text-muted-foreground leading-relaxed">
                 We specialise in <strong>Flat Products</strong> (HR Sheet, CR Sheet, MS Plate, Chequered Plate) 
                 and <strong>Long Structural Products</strong> (ISMB Beams, ISMC Channels, MS Angles, MS Round Bars, 

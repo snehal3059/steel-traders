@@ -39,11 +39,6 @@ export default function AboutPage() {
                 of high-quality MS steel products to construction companies, fabricators, manufacturers, 
                 and infrastructure projects across India.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Today, under the continued leadership of the <strong>second generation</strong>, we blend fresh 
-                digital insight with the timeless values — integrity, transparency, and commitment to 
-                customer success — that our founder instilled from day one.
-              </p>
               <p className="text-muted-foreground leading-relaxed">
                 We specialise in <strong>Flat Products</strong> and <strong>Long Structural Products</strong>, 
                 sourcing from India&apos;s finest mills including SAIL, TATA Steel, Gagan Gold, Shyam SEL, 
