@@ -101,7 +101,7 @@ export default function HomePage() {
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Founded in 2008 by Shri Somnath Gupta, OMKARA COMMERCIAL PVT. LTD. is a premier 
                 iron and steel trading company based in Howrah, West Bengal. What began as a small trading 
-                venture has grown into a trusted supplier of high-quality MS steel products across India.
+                venture has grown into a trusted supplier of high-quality MS steel products.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Under the continued leadership of the second generation, we bring fresh digital insight 
@@ -120,7 +120,6 @@ export default function HomePage() {
                   { label: "Years in Business", value: "15+" },
                   { label: "Products Supplied", value: "500+" },
                   { label: "Happy Clients", value: "1000+" },
-                  { label: "Cities Served", value: "50+" },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
                     <div className="text-3xl font-bold text-primary mb-1">{stat.value}</div>

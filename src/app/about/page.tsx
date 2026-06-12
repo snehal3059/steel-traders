@@ -4,7 +4,6 @@ const stats = [
   { label: "Years in Business", value: "15+" },
   { label: "Products Supplied", value: "500+" },
   { label: "Happy Clients", value: "1000+" },
-  { label: "Cities Served", value: "50+" },
 ]
 
 const values = [
