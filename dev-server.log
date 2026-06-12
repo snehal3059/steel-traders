@@ -1,0 +1,12 @@
+
+> steel-traders@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.10.12:3000
+✓ Ready in 1288ms
+
+ GET /weight-calculator 200 in 2.3s (next.js: 1870ms, application-code: 394ms)
+ GET / 200 in 2.3s (next.js: 701ms, application-code: 1568ms)
+ GET /grid.svg 404 in 400ms (next.js: 79ms, application-code: 321ms)
