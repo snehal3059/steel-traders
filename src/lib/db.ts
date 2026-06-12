@@ -8,8 +8,10 @@ let initialized = false
 async function getClient(): Promise<Client> {
   if (client) return client
 
-  const url = process.env.TURSO_DB_URL
-  const token = process.env.TURSO_DB_TOKEN
+  // Turso Vercel integration uses TURSO_DATABASE_URL + TURSO_AUTH_TOKEN
+  // Also support custom TURSO_DB_URL + TURSO_DB_TOKEN for flexibility
+  const url = process.env.TURSO_DATABASE_URL || process.env.TURSO_DB_URL
+  const token = process.env.TURSO_AUTH_TOKEN || process.env.TURSO_DB_TOKEN
 
   if (url && token) {
     client = createClient({ url, authToken: token })
