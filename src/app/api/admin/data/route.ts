@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server"
-import { getDb } from "@/lib/db"
+import { getInquiries, getContacts } from "@/lib/db"
+
+export const dynamic = "force-dynamic"
 
 export async function GET() {
   try {
-    const db = getDb()
-    const inquiries = db.prepare("SELECT * FROM inquiries ORDER BY created_at DESC LIMIT 100").all()
-    const contacts = db.prepare("SELECT * FROM contacts ORDER BY created_at DESC LIMIT 100").all()
+    const inquiries = await getInquiries()
+    const contacts = await getContacts()
     return NextResponse.json({ inquiries, contacts })
   } catch (err) {
     console.error("Admin data error:", err)

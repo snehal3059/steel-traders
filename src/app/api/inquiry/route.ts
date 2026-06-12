@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
-import { getDb } from "@/lib/db"
+import { insertInquiry } from "@/lib/db"
 
 export async function POST(req: NextRequest) {
   try {
@@ -10,12 +10,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Name, email, and phone are required" }, { status: 400 })
     }
 
-    const db = getDb()
-    const stmt = db.prepare(
-      `INSERT INTO inquiries (product_slug, product_title, name, email, phone, company, quantity, message)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
-    )
-    stmt.run(product_slug || null, product_title || null, name, email, phone, company || null, quantity || null, message || null)
+    await insertInquiry({ product_slug, product_title, name, email, phone, company, quantity, message })
 
     return NextResponse.json({ success: true })
   } catch (err) {
