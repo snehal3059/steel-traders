@@ -98,8 +98,9 @@ export function Footer() {
                   <span>+91 91238 57784</span>
                 </a>
               </li>
-              <li className="-mt-3">
-                <a href="tel:+919830031148" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ paddingLeft: '44px' }}>
+              <li>
+                <a href="tel:+919830031148" className="flex items-center gap-3 text-sm hover:text-white transition-colors">
+                  <Phone className="h-5 w-5 shrink-0 text-primary" />
                   <span>+91 98300 31148</span>
                 </a>
               </li>
@@ -109,8 +110,9 @@ export function Footer() {
                   <span>OMKARA_COMMLPVTLTD@HOTMAIL.COM</span>
                 </a>
               </li>
-              <li className="-mt-3">
-                <a href="mailto:OMKARA.COMMLPVTLTD@GMAIL.COM" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ paddingLeft: '44px' }}>
+              <li>
+                <a href="mailto:OMKARA.COMMLPVTLTD@GMAIL.COM" className="flex items-center gap-3 text-sm hover:text-white transition-colors">
+                  <Mail className="h-5 w-5 shrink-0 text-primary" />
                   <span>OMKARA.COMMLPVTLTD@GMAIL.COM</span>
                 </a>
               </li>

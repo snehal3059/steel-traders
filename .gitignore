@@ -36,6 +36,9 @@ yarn-error.log*
 # local sqlite database (not for deployment)
 /data
 
+# server logs
+server*.log
+
 # vercel
 .vercel
 
