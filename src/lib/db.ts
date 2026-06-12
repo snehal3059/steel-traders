@@ -1,22 +1,32 @@
 import { createClient } from "@libsql/client"
+import type { Client } from "@libsql/client"
 import path from "path"
 
-function getClient() {
+let client: Client | null = null
+let initialized = false
+
+async function getClient(): Promise<Client> {
+  if (client) return client
+
   const url = process.env.TURSO_DB_URL
   const token = process.env.TURSO_DB_TOKEN
 
   if (url && token) {
-    return createClient({ url, authToken: token })
+    client = createClient({ url, authToken: token })
+  } else {
+    const filePath = path.join(process.cwd(), "data", "omkara.db")
+    client = createClient({ url: `file:${filePath}` })
   }
 
-  const filePath = path.join(process.cwd(), "data", "omkara.db")
-  return createClient({ url: `file:${filePath}` })
+  return client
 }
 
-const client = getClient()
+async function init() {
+  if (initialized) return
+  initialized = true
 
-export async function initDb() {
-  await client.execute(`
+  const c = await getClient()
+  await c.execute(`
     CREATE TABLE IF NOT EXISTS inquiries (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       product_slug TEXT,
@@ -30,7 +40,7 @@ export async function initDb() {
       created_at TEXT DEFAULT (datetime('now'))
     )
   `)
-  await client.execute(`
+  await c.execute(`
     CREATE TABLE IF NOT EXISTS contacts (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       name TEXT NOT NULL,
@@ -43,8 +53,6 @@ export async function initDb() {
   `)
 }
 
-initDb().catch(console.error)
-
 export async function insertInquiry(data: {
   product_slug?: string
   product_title?: string
@@ -55,8 +63,10 @@ export async function insertInquiry(data: {
   quantity?: string
   message?: string
 }) {
+  await init()
+  const c = await getClient()
   const { product_slug, product_title, name, email, phone, company, quantity, message } = data
-  await client.execute({
+  await c.execute({
     sql: `INSERT INTO inquiries (product_slug, product_title, name, email, phone, company, quantity, message)
           VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
     args: [product_slug ?? null, product_title ?? null, name, email, phone, company ?? null, quantity ?? null, message ?? null],
@@ -70,8 +80,10 @@ export async function insertContact(data: {
   subject?: string
   message: string
 }) {
+  await init()
+  const c = await getClient()
   const { name, email, phone, subject, message } = data
-  await client.execute({
+  await c.execute({
     sql: `INSERT INTO contacts (name, email, phone, subject, message)
           VALUES (?, ?, ?, ?, ?)`,
     args: [name, email, phone ?? null, subject ?? null, message],
@@ -79,11 +91,15 @@ export async function insertContact(data: {
 }
 
 export async function getInquiries() {
-  const rs = await client.execute("SELECT * FROM inquiries ORDER BY created_at DESC LIMIT 100")
+  await init()
+  const c = await getClient()
+  const rs = await c.execute("SELECT * FROM inquiries ORDER BY created_at DESC LIMIT 100")
   return rs.rows
 }
 
 export async function getContacts() {
-  const rs = await client.execute("SELECT * FROM contacts ORDER BY created_at DESC LIMIT 100")
+  await init()
+  const c = await getClient()
+  const rs = await c.execute("SELECT * FROM contacts ORDER BY created_at DESC LIMIT 100")
   return rs.rows
 }
