@@ -114,7 +114,7 @@ export async function GET() {
     })
   }
 
-  const pdfBytes = await pdfDoc.save()
+  const pdfBytes = Buffer.from(await pdfDoc.save())
 
   return new NextResponse(pdfBytes, {
     headers: {
