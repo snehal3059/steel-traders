@@ -44,14 +44,21 @@ export function Header() {
 
         <div className="hidden lg:flex lg:items-center lg:gap-4">
           <a
-            href="tel:+919876543210"
+            href="tel:+919123857784"
             className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary transition-colors"
           >
-            <Phone className="h-4 w-4" />
-            <span>+91 98765 43210</span>
+            <Phone className="h-4 w-4 shrink-0" />
+            <span>+91 91238 57784</span>
           </a>
           <a
-            href="https://wa.me/919876543210"
+            href="tel:+919830031148"
+            className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary transition-colors"
+          >
+            <Phone className="h-4 w-4 shrink-0" />
+            <span>+91 98300 31148</span>
+          </a>
+          <a
+            href="https://wa.me/919123857784"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
@@ -87,15 +94,23 @@ export function Header() {
             ))}
             <div className="pt-4 border-t space-y-3">
               <a
-                href="tel:+919876543210"
+                href="tel:+919123857784"
                 className="flex items-center gap-3 text-gray-600 hover:text-primary"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <Phone className="h-5 w-5" />
-                <span>+91 98765 43210</span>
+                <span>+91 91238 57784</span>
               </a>
               <a
-                href="https://wa.me/919876543210"
+                href="tel:+919830031148"
+                className="flex items-center gap-3 text-gray-600 hover:text-primary"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Phone className="h-5 w-5" />
+                <span>+91 98300 31148</span>
+              </a>
+              <a
+href="https://wa.me/919123857784"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium justify-center"

@@ -113,9 +113,9 @@ export default function GradesPage() {
             Our team can help you select the optimal grade for your specific application, load requirements, and budget.
           </p>
           <div className="flex flex-wrap gap-3">
-            <a href="tel:+919876543210" className="text-sm font-medium text-primary hover:underline">+91 98765 43210</a>
+            <a href="tel:+919123857784" className="text-sm font-medium text-primary hover:underline">+91 91238 57784</a> / <a href="tel:+919830031148" className="text-sm font-medium text-primary hover:underline">+91 98300 31148</a>
             <span className="text-muted-foreground">|</span>
-            <a href="mailto:info@omkaracommercial.com" className="text-sm font-medium text-primary hover:underline">info@omkaracommercial.com</a>
+            <a href="mailto:OMKARA_COMMLPVTLTD@HOTMAIL.COM" className="text-sm font-medium text-primary hover:underline">OMKARA_COMMLPVTLTD@HOTMAIL.COM</a><br /><a href="mailto:OMKARA.COMMLPVTLTD@GMAIL.COM" className="text-sm font-medium text-primary hover:underline">OMKARA.COMMLPVTLTD@GMAIL.COM</a>
           </div>
         </div>
       </div>

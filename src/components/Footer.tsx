@@ -28,7 +28,7 @@ export function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919123857784"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
@@ -93,15 +93,25 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:+919876543210" className="flex items-center gap-3 text-sm hover:text-white transition-colors">
+                <a href="tel:+919123857784" className="flex items-center gap-3 text-sm hover:text-white transition-colors">
                   <Phone className="h-5 w-5 shrink-0 text-primary" />
-                  <span>+91 98765 43210</span>
+                  <span>+91 91238 57784</span>
+                </a>
+              </li>
+              <li className="-mt-3">
+                <a href="tel:+919830031148" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ paddingLeft: '44px' }}>
+                  <span>+91 98300 31148</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:info@omkaracommercial.com" className="flex items-center gap-3 text-sm hover:text-white transition-colors">
+                <a href="mailto:OMKARA_COMMLPVTLTD@HOTMAIL.COM" className="flex items-center gap-3 text-sm hover:text-white transition-colors">
                   <Mail className="h-5 w-5 shrink-0 text-primary" />
-                  <span>info@omkaracommercial.com</span>
+                  <span>OMKARA_COMMLPVTLTD@HOTMAIL.COM</span>
+                </a>
+              </li>
+              <li className="-mt-3">
+                <a href="mailto:OMKARA.COMMLPVTLTD@GMAIL.COM" className="flex items-center gap-3 text-sm hover:text-white transition-colors" style={{ paddingLeft: '44px' }}>
+                  <span>OMKARA.COMMLPVTLTD@GMAIL.COM</span>
                 </a>
               </li>
             </ul>

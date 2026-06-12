@@ -97,7 +97,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                   </Button>
                 </a>
               )}
-              <a href={`https://wa.me/919876543210?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://wa.me/919123857784?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                 <Button className="gap-2 bg-green-600 hover:bg-green-700 text-white">
                   <MessageCircle className="h-4 w-4" />
                   Inquiry via WhatsApp

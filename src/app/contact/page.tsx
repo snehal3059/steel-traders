@@ -123,8 +123,11 @@ export default function ContactPage() {
                     <Phone className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                     <div>
                       <p className="font-medium text-sm">Phone</p>
-                      <a href="tel:+919876543210" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                        +91 98765 43210
+                      <a href="tel:+919123857784" className="text-sm text-muted-foreground hover:text-primary transition-colors block">
+                        +91 91238 57784
+                      </a>
+                      <a href="tel:+919830031148" className="text-sm text-muted-foreground hover:text-primary transition-colors block">
+                        +91 98300 31148
                       </a>
                     </div>
                   </div>
@@ -133,8 +136,11 @@ export default function ContactPage() {
                     <Mail className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                     <div>
                       <p className="font-medium text-sm">Email</p>
-                      <a href="mailto:info@omkaracommercial.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                        info@omkaracommercial.com
+                      <a href="mailto:OMKARA_COMMLPVTLTD@HOTMAIL.COM" className="text-sm text-muted-foreground hover:text-primary transition-colors block">
+                        OMKARA_COMMLPVTLTD@HOTMAIL.COM
+                      </a>
+                      <a href="mailto:OMKARA.COMMLPVTLTD@GMAIL.COM" className="text-sm text-muted-foreground hover:text-primary transition-colors block">
+                        OMKARA.COMMLPVTLTD@GMAIL.COM
                       </a>
                     </div>
                   </div>
@@ -159,7 +165,7 @@ export default function ContactPage() {
                     Get instant responses via WhatsApp
                   </p>
                   <a
-                    href={`https://wa.me/919876543210?text=${whatsappMessage}`}
+                    href={`https://wa.me/919123857784?text=${whatsappMessage}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
